@@ -9,13 +9,6 @@ define('basededatos', "rubromatV2");
 // Para utilizarse en otras páginas
 $baseDeDatos = 'rubromatV2';
 
-// define('server', "mysql11.000webhost.com");
-// define('usuario', "a3474761_gabi");
-// define('clave', "L4OutrE0KE");
-// define('basededatos', "a3474761_rm");
-// // Para utilizarse en otras páginas
-// $baseDeDatos = 'a3474761_rm';
-
 $link = mysqli_connect (server, usuario, clave, basededatos);
 
 // control de errores
