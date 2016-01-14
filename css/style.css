@@ -452,10 +452,10 @@
         color: #fff;
         box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .3)
     }
-/* Corrección íconos */
-.material-icons{
-    overflow: hidden;
-}
+    /* Corrección íconos */
+    .material-icons{
+        overflow: hidden;
+    }
 /* formulario */
 
     .formTop span.descripcion{
@@ -500,9 +500,12 @@
     }
 
 /* Portada */
-    body.bodyPortada{
-        padding: 0 ;
-        max-width: none;
+    body.marco.bodyPortada{
+        padding: 0px  ;
+        max-width: none ;
+    }
+    body.marco.bodyPortada article{
+        width: 100%;
     }
     .portada{
         width: 100%;
@@ -544,6 +547,7 @@
         box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.3);
         z-index: 20;
         position: relative;
+        overflow: hidden;
     }
     #presentacion .material-icons{
         font-size: 80px;
@@ -606,6 +610,13 @@
         vertical-align: top;
     }
 
+    /* Corrección IOS */
+    @media only screen and (max-width: 1024px){
+        #accion,
+        .portada{
+            background-attachment: scroll !important;
+        }
+    }
 /* tables con CSS */
     .table{
         display: table;
