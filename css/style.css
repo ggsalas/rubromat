@@ -705,6 +705,9 @@
     header nav ul li ul{
         right: 0;
     }
+    body.bodyPortada article{
+        margin: 0;
+    } 
     article{
         margin-left: -20px;
         margin-right: -20px;

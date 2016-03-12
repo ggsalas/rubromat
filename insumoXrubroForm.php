@@ -2,13 +2,8 @@
 /**
  * Este formulario agrega un insumo a un rubro
  */
-
-// título de la página
-$titulo = "Añadir un insumo al rubro";
-
-// requerimientos
+// requerimiento
 include('./coneccionBd.php');
-include('./header.php');
 
 // inicio las variables
 $id_rubro = $_GET['id_rubro'];
@@ -18,6 +13,9 @@ $rendimiento = "";
 $Bid_insumo = isset($_GET['Bid_insumo']) ? $_GET['Bid_insumo'] : 0;
 
 $accion = "crear";
+
+// título de la página
+$titulo = "Añadir un insumo a: " . tituloNombre('rubro', $id_rubro, 1);
 
 /**
  * verifico si se trata de una edición, chequeando si existe
@@ -72,8 +70,11 @@ else {
 $valoresInsumos = consultaDb($consultaInsumos);
 
 /* Cerrar conexión ************************************************************/
-mysqli_close($link)
+mysqli_close($link);
 
+
+// requerimiento
+include('./header.php');
 ?>
 
 <?php

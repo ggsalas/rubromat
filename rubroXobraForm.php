@@ -3,17 +3,16 @@
  * Este formulario agrega un rubro a una obra
  */
 
-// título de la página
-$titulo = "Añadir un rubro a la obra";
-
 // requerimientos
 include('./coneccionBd.php');
-include('./header.php');
 
 // inicio las variables
 $id_obra = $_GET['id_obra'];
 $id = ""; // la id del insumo
 $cantidad = "";
+
+// título de la página
+$titulo = "Añadir un rubro a: " . tituloNombre('obra', $id_obra, 0);
 
 // Si el insumo lo obtengo con el buscador de insumos
 $Bid_rubro = isset($_GET['Bid_rubro']) ? $_GET['Bid_rubro'] : 0;
@@ -73,7 +72,9 @@ else {
 $valoresRubros = consultaDb($consultaRubros);
 
 /* Cerrar conexión ************************************************************/
-mysqli_close($link)
+mysqli_close($link);
+
+include('./header.php');
 
 ?>
 
