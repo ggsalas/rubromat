@@ -3,11 +3,11 @@
  * Conectar a la base de datos del programa RubroMAT
  ******************************************************************************/
 define('server', "localhost");
-define('usuario', "gabriel");
-define('clave', "1234");
-define('basededatos', "rubromatV2");
+define('usuario', "root");
+define('clave', "root");
+define('basededatos', "rubroMat");
 // Para utilizarse en otras páginas
-$baseDeDatos = 'rubromatV2';
+$baseDeDatos = 'rubroMat';
 
 $link = mysqli_connect (server, usuario, clave, basededatos);
 

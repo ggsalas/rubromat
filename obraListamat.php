@@ -44,7 +44,7 @@ if (isset($_GET['mensaje']))
 <div class="encabezado">
     <div class="table cien">
         <div class="row ">
-            <h1 class="cell">Materiales para: <a href=./obraForm.php?id=" .$id. " ><?php echo $nombreObra; ?></a></h1>
+            <h1 class="cell">Materiales para: <a href="./obraForm.php?id=<?php echo $id; ?>" ><?php echo $nombreObra; ?></a></h1>
             <span class="cell">
                 <a href="./materiales.csv" class="boton rojo rText" style="margin:0 0 8px 20px "><i class="material-icons">file_download</i>Descargar (CSV)</a>
                 <a href="#"  onClick="window.print()" class="boton rText"><i class="material-icons">print</i>Imprimir</a>
